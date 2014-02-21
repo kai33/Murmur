@@ -1,48 +1,50 @@
-var fileSystem = require('fs'),
-    path = require('path'),
-    ///////////////////////
-    controllerDirectory = __dirname + '/controller'
+var controllerDirectory = __dirname + '/controller'
 
 module.exports = function(app, express){
-    setupPublic(app, express);
-    setupHomepage(app);
-    setupControllers(app);
+    setupRoute(app, express);
 }
 
-function setupPublic(app, express) {
+function setupRoute(app, express) {
+    setupPublicRoute(app, express);
+    setupHomepageRoute(app);
+    setupControllersRoute(app);
+}
+
+function setupPublicRoute(app, express) {
     app.use(express.static(__dirname + '/public'));
 }
 
-function setupHomepage(app) {
+function setupHomepageRoute(app) {
     var home = require(controllerDirectory + '/home')
     app.get('/', home)
 }
 
-function setupControllers(app) {
+function setupControllersRoute(app) {
+    var fileSystem = require('fs')
     fileSystem.readdir(controllerDirectory, function (err, files) {
         if (!err) {
-            setupControllersByFiles(app, files);
+            setupControllersRouteByFiles(app, files);
         }
-        setup404(app);
+        setup404Route(app);
     })
 }
 
-function setup404(app) {
+function setup404Route(app) {
     var _404 = require(controllerDirectory + '/_404')
     app.get('*', _404)
 }
 
-function setupControllersByFiles(app, files) {
-    var controllerName,
+function setupControllersRouteByFiles(app, files) {
+    var path = require('path'),
+        controllerRoute,
         controllerPath,
         controller
     files.forEach(function (item) {
-        controllerName = '/' + path.basename(item, '.js')
-        controllerPath = controllerDirectory + controllerName
-        //set up get & post for every controller
+        controllerRoute = '/' + path.basename(item, '.js')
+        controllerPath = controllerDirectory + controllerRoute
         controller = require(controllerPath)
-        app.get(controllerName, controller)
-        app.post(controllerName, controller)
+        app.get(controllerRoute, controller)
+        app.post(controllerRoute, controller)
     })
 }
 
