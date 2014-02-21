@@ -1,4 +1,7 @@
-var controllerDirectory = __dirname + '/controller'
+var DIRECTORY_CONTROLLER = __dirname + '/controller',
+    DIRECTORY_PUBLIC     = __dirname + '/public',
+    DIRECTORY_HOME       = DIRECTORY_CONTROLLER + '/home',
+    DIRECTORY_404        = DIRECTORY_CONTROLLER + '/_404'
 
 module.exports = function(app, express){
     setupRoute(app, express);
@@ -11,17 +14,17 @@ function setupRoute(app, express) {
 }
 
 function setupPublicRoute(app, express) {
-    app.use(express.static(__dirname + '/public'));
+    app.use(express.static(DIRECTORY_PUBLIC));
 }
 
 function setupHomepageRoute(app) {
-    var home = require(controllerDirectory + '/home')
+    var home = require(DIRECTORY_HOME)
     app.get('/', home)
 }
 
 function setupControllersRoute(app) {
     var fileSystem = require('fs')
-    fileSystem.readdir(controllerDirectory, function (err, files) {
+    fileSystem.readdir(DIRECTORY_CONTROLLER, function (err, files) {
         if (!err) {
             setupControllersRouteByFiles(app, files);
         }
@@ -30,18 +33,15 @@ function setupControllersRoute(app) {
 }
 
 function setup404Route(app) {
-    var _404 = require(controllerDirectory + '/_404')
+    var _404 = require(DIRECTORY_404)
     app.get('*', _404)
 }
 
 function setupControllersRouteByFiles(app, files) {
-    var path = require('path'),
-        controllerRoute,
-        controllerPath,
-        controller
+    var path = require('path')
     files.forEach(function (item) {
-        controllerRoute = '/' + path.basename(item, '.js')
-        controllerPath = controllerDirectory + controllerRoute
+        var controllerRoute = '/' + path.basename(item, '.js'),
+        controllerPath = DIRECTORY_CONTROLLER + controllerRoute,
         controller = require(controllerPath)
         app.get(controllerRoute, controller)
         app.post(controllerRoute, controller)
