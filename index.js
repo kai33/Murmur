@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
-require(__dirname + '/route')(app, express)
+var route = require('./core/route')(app, express)
+route.setup()
 app.listen(3000)
 
 //TODO:
