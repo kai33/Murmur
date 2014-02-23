@@ -3,8 +3,8 @@ var app,
     path = require('path'),
     DIRECTORY_CONTROLLER = path.dirname(__dirname) + '/controller',
     DIRECTORY_PUBLIC     = path.dirname(__dirname) + '/public',
-    DIRECTORY_HOME       = DIRECTORY_CONTROLLER + '/home',
-    DIRECTORY_404        = DIRECTORY_CONTROLLER + '/_404'
+    DIRECTORY_CONTROLLER_HOME = DIRECTORY_CONTROLLER + '/home',
+    DIRECTORY_CONTROLLER_404  = DIRECTORY_CONTROLLER + '/_404'
 
 module.exports = function(_app_, _express_){
     app = _app_
@@ -23,7 +23,7 @@ function setupPublicRoute() {
 }
 
 function setupHomepageRoute() {
-    var home = require(DIRECTORY_HOME)(app)
+    var home = require(DIRECTORY_CONTROLLER_HOME)(app)
     app.get('/', home.delegate)
 }
 
@@ -38,7 +38,7 @@ function setupControllersRoute() {
 }
 
 function setup404Route() {
-    var _404 = require(DIRECTORY_404)(app)
+    var _404 = require(DIRECTORY_CONTROLLER_404)(app)
     app.get('*', _404.delegate)
 }
 

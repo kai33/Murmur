@@ -23,19 +23,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
+            <state line="4" column="13" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="21" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/db.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="2" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="route.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="53" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="930">
+            <state line="15" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.10033445" vertical-offset="165" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -53,16 +71,7 @@
       <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="2" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.26-src/core-modules-sources/lib/module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="14" selection-start="9528" selection-end="9528" vertical-scroll-proportion="0.0" vertical-offset="4639" max-vertical-offset="7860">
+            <state line="3" column="16" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
@@ -102,8 +111,11 @@
         <option value="$PROJECT_DIR$/controller/test.js" />
         <option value="$PROJECT_DIR$/controller/_404.js" />
         <option value="$PROJECT_DIR$/route.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/core/route.js" />
+        <option value="$PROJECT_DIR$/conf/conf.js" />
+        <option value="$PROJECT_DIR$/conf/config.js" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/conf/db.js" />
       </list>
     </option>
   </component>
@@ -167,7 +179,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,7 +252,9 @@
     <configuration default="false" name="Debug" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <browser start="true" url="http://127.0.0.1:3000" with-js-debugger="false" />
       <RunnerSettings RunnerId="NodeJS.debug" />
+      <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.debug" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
     <list size="2">
@@ -318,7 +332,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="27" />
+      <option name="time" value="29" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -511,6 +525,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.26-src/core-modules-sources/lib/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="337" column="14" selection-start="9528" selection-end="9528" vertical-scroll-proportion="0.21906355" vertical-offset="4639" max-vertical-offset="7860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="17" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
@@ -520,28 +541,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+        <state line="3" column="16" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.26-src/core-modules-sources/lib/module.js">
+    <entry file="file://$PROJECT_DIR$/conf/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="14" selection-start="9528" selection-end="9528" vertical-scroll-proportion="0.0" vertical-offset="4639" max-vertical-offset="7860">
+        <state line="3" column="21" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/route.js">
+    <entry file="file://$PROJECT_DIR$/conf/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="53" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="930">
+        <state line="7" column="2" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
+        <state line="4" column="13" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.10033445" vertical-offset="165" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
